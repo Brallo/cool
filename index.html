@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Popup</title>
+    <title>Cool Popup with Sound</title>
     <style>
         body {
             text-align: center;
@@ -46,9 +46,16 @@
         <button id="close" onclick="hidePopup()">Close</button>
     </div>
 
+    <!-- Audio Element -->
+    <audio id="popupSound">
+        <source src="https://www.mywebsite.com/mysound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
         function showPopup() {
             document.getElementById('popup').style.display = 'block';
+            document.getElementById('popupSound').play(); // Play sound
         }
         function hidePopup() {
             document.getElementById('popup').style.display = 'none';
